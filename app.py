@@ -15,7 +15,7 @@ st.title("Rotating Magnetic Dipole – Interactive Visualiser")
 # Sidebar sliders (−5 … 5, 0.1 step)
 x = st.sidebar.slider("x [m]", -5.0, 5.0, 0.0, 0.1)
 y = st.sidebar.slider("y [m]", -5.0, 5.0, 0.0, 0.1)
-z = st.sidebar.slider("z [m]", -5.0, 5.0, 0.5, 0.1)
+z = st.sidebar.slider("z [m]", -5.0, 5.0, 1.0, 0.1)
 point = (x, y, z)
 
 # Compute field series
