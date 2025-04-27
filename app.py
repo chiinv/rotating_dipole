@@ -53,11 +53,11 @@ fig_xy.update_layout(xaxis_range=[-5, 5], yaxis_range=[-5, 5],
 # Layout: 2 × 2 grid ---------------------------------------------------------
 col1, col2 = st.columns(2)
 with col1:
-    st.plotly_chart(fig_ts, use_container_width=True)
+    st.plotly_chart(fig_3d, use_container_width=True)
 with col2:
     st.plotly_chart(fig_lis, use_container_width=True)
 col3, col4 = st.columns(2)
 with col3:
-    st.plotly_chart(fig_3d, use_container_width=True)
+    st.plotly_chart(fig_ts, use_container_width=True)
 with col4:
     st.plotly_chart(fig_xy, use_container_width=True)
