@@ -42,7 +42,11 @@ lim3 = np.max(np.abs(np.concatenate([bx, by, bz])))
 fig_3d = go.Figure(go.Scatter3d(x=bx, y=by, z=bz, mode="lines+markers"))
 fig_3d.update_layout(scene=dict(xaxis_title="Bx [T]", yaxis_title="By [T]", zaxis_title="Bz [T]",
                                 xaxis_range=[-lim3, lim3], yaxis_range=[-lim3, lim3], zaxis_range=[-lim3, lim3]),
-                     margin=dict(l=0,r=0,t=20,b=0))
+                     margin=dict(l=0,r=0,t=20,b=0),
+                     scene_camera=dict(
+                            eye=dict(x=0.0, y=-2.5, z=1.0),   # -y 方向から眺める
+                            up=dict(x=0, y=0, z=1)
+                    ))
 
 # 4. Observation point map (x‑y)
 fig_xy = go.Figure(go.Scatter(x=[x], y=[y], mode="markers", marker=dict(size=10, color="red")))
